@@ -1,0 +1,190 @@
+{
+    "_comment": "Does not yet merge TNAU questionnaire; only FARMs",
+    "Version",: 5,
+    "UserID": "<login user id>",
+    "UserEmailID": "<login user email>",
+    "SimulationName" : "MySimulation1",
+   "_comment": "Array of ROIs, each ROI contains Holos prod info, config of ROI, farming practices, grouping of ROIs (optional), mapping of ROIs or ROI groups to farming practices",
+    "ROIs": [
+        {
+            "_comment": "ROI Is New",
+            "ROIName": "Budalur Block",
+
+            "ROIConfiguration": {
+                "_comment": "Sample geoJSON",
+                "geoJSON",: {
+                    "type": "FeatureCollection",
+                        "features": [
+                        { "type": "Feature",
+                           "geometry": {
+                             "type": "Polygon",
+                             "coordinates": [
+                               [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0],
+                                 [100.0, 1.0], [100.0, 0.0] ]
+                               ]
+
+                           },
+                           "properties": {
+                             "Name": "TestPoly",
+                             "prop1": {"this": "that"}
+                             }
+                           }
+                        ]
+                      },
+                "SubBlockSize": 2245
+            },
+            "SelectedHolosProducts": [
+                "PRSEASON"
+            ],
+            "HolosProductParams": [
+                {
+                    "PRSEASON": {
+                        "NYERS": 5,
+                        "AnalogousWeatherYear": 2017,
+                        "_comment": "AutoPlanting is new",
+                        "AutoPlanting",: "No"
+                    }
+                }
+            ],
+            "_comment":"Farming Practice is New",
+            "FarmingPractices",: [
+                {
+                    "General": {
+                        "FPName": "ROI1_FP1",
+                        "FPDesc": "blah blah"
+                    },
+                    "CropInfo": {
+                        "Crop": "Rice",
+                        "Variety": "BPT5204"
+                    },
+                    "PlantingInfo": {
+                        "PlantingDate": mmddyyyy,
+                        "PlantingMethod": "Seed/Transplant",
+                        "Density_PlantsPerSqM": 5
+                    },
+                    "IrrigationInfo": [
+                        {
+                            "Date": mmddyyyy,
+                            "Method": "Borrow from FARMS? How to translate to DSSAT vars",
+                            "Depth_mm": "Is this depth of water or irrigation start?"
+                        }
+                    ],
+                    "FertilizationInfo": [
+                        {
+                            "Date": mmddyyyy,
+                            "Fertilizer": "Look at FARNS",
+                            "N_kg_ha": floating,
+                            "P_kg_ha": floating,
+                            "Method": "values from FARMs"
+                        }
+                    ],
+                    "TillageInfo": [
+                        {
+                            "Date": mmddyyyy,
+                            "Method": "values from FARMs"
+                        }
+                    ],
+
+                }
+            ],
+        "_comment": "NOTHING BELOW THIS IS VALID",
+            "Subblocks": {
+                "-1, -1": {
+                    "CropAreaPct": 100,
+                    "Treatments": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ]
+                },
+                "0, -1": {
+                    "CropAreaPct": 100,
+                    "Treatments": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ]
+                },
+                "1, -1": {
+                    "CropAreaPct": 100,
+                    "Treatments": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ]
+                },
+                "-1, 0": {
+                    "CropAreaPct": 100,
+                    "Treatments": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ]
+                },
+                "0, 0": {
+                    "CropAreaPct": 100,
+                    "Treatments": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ]
+                },
+                "1, 0": {
+                    "CropAreaPct": 100,
+                    "Treatments": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ]
+                },
+                "-1, 1": {
+                    "CropAreaPct": 100,
+                    "Treatments": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ]
+                },
+                "0, 1": {
+                    "CropAreaPct": 100,
+                    "Treatments": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ]
+                },
+                "1, 1": {
+                    "CropAreaPct": 100,
+                    "Treatments": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ]
+                }
+            }
+        }
+    ],
+    "ROIGroups": {
+
+        },
+    "ROI2FarmingPracticeMap": {},
+    "ROIGroup2FarmingPracticeMap": {}
+}
