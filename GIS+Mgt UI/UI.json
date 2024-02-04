@@ -55,7 +55,11 @@
                     },
                     "CropInfo": {
                         "Crop": "Rice",
-                        "Variety": "BPT5204"
+                        "_comment": "Multiple varieties allowed for pre-seasons; but for in-season only one",
+                        "Variety": [
+                            "BPT5204",
+                            "CO51"
+                        ]
                     },
                     "PlantingInfo": {
                         "PlantingDate": "int mmddyyyy",
