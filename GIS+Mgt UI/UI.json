@@ -32,7 +32,8 @@
                         ]
                       },
                 "SubBlockSize": 2245
-            },
+                }
+            ],
             "SelectedHolosProducts": [
                 "PRSEASON"
             ],
@@ -95,96 +96,50 @@
                 "-1, -1": {
                     "CropAreaPct": 100,
                     "Treatments": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5
                     ]
                 },
                 "0, -1": {
                     "CropAreaPct": 100,
                     "Treatments": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5
                     ]
                 },
                 "1, -1": {
                     "CropAreaPct": 100,
                     "Treatments": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5
                     ]
                 },
                 "-1, 0": {
                     "CropAreaPct": 100,
                     "Treatments": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5
                     ]
                 },
                 "0, 0": {
                     "CropAreaPct": 100,
                     "Treatments": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5
                     ]
                 },
                 "1, 0": {
                     "CropAreaPct": 100,
                     "Treatments": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5
                     ]
                 },
                 "-1, 1": {
                     "CropAreaPct": 100,
                     "Treatments": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5
                     ]
                 },
                 "0, 1": {
                     "CropAreaPct": 100,
                     "Treatments": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5
                     ]
                 },
                 "1, 1": {
                     "CropAreaPct": 100,
                     "Treatments": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5
                     ]
                 }
             }
-        }
-    ],
+        },
     "ROIGroups": {
 
         },
