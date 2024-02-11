@@ -32,12 +32,12 @@
 						"id": "Coimbatore,TamilNadu"
 					}]
 				},
-				"SubBlockSize": 2245
+				"SubBlockSize": 100000000
 			}
 		}],
 		"HolosProductParams": [{
 			"PRSEASON": {
-				"NYERS": 5,
+				"NYERS": 2,
 				"AnalogousWeatherYear": 2017
 			}
 		}],
@@ -56,5 +56,5 @@
 		}
 	}],
 	"Version": 4.1,
-	"UserEmailID": "vxb4535@mavs.uta.edu"
+	"UserEmailID": "vasu@gaiadhi.com"
 }
