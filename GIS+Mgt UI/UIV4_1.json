@@ -47,7 +47,7 @@
 			"TargetPlantingDay": 28,
 			"_comment": "*NEW* PlantingMethod and Density_PlantsPerSqM Are New",
 
-			"PlantingMethod": "Seed/Transplant",
+			"PlantingMethod": "Transplants",
 			"Density_PlantsPerSqM": 5,
 
 			"BaseXFileName": "JDCH2022.RIX",
