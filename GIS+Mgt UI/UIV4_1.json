@@ -1,5 +1,7 @@
 {
 	"UserID": "karthik",
+	"CompanyName": "GaiaDhi",
+	"ExptName": "Test Expt",
 	"Blocks": [{
 		"Name": "UTA demo",
 		"SelectedHolosProducts": ["PRSEASON"],
