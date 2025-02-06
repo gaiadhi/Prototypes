@@ -1,4 +1,5 @@
-#Requiremenmts: BlockReport df, appropriate admin levels of geo, GD_Holos_RenderMP.json
+#Requiremenmts: BlockReport df, admin2 geos supported by Holos, GD_Holos_RenderMP.json.  For Team 9, Spring 2025, these can be found at 
+#https://teams.microsoft.com/v2/?tenantId=5cdc5b43-d7be-4caa-8173-729e3b0a62d9
 import pandas as pd
 import sys
 from shapely.geometry import Point, shape, Polygon
