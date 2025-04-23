@@ -1,2 +1,2 @@
-Please download below file to run the code without an error: "tl_2024_us_county.shp". As this file is 125Mb. we couldn't able to upload it here
+Please download "tl_2024_us_county.shp" file to run the code without an error. As this file is 125Mb, we couldn't able to upload it here
 We can download it from  https://www2.census.gov/geo/tiger/TIGER2024/COUNTY/
