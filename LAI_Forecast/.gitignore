@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+# Large model files (not pushed to GitHub)
+rf_model.pkl
+lstm_model.h5
+xgb_model.json
+scaler.pkl
