@@ -179,8 +179,9 @@ def predict_from_env_overrides(df_lag, env_overrides, runno, dap, models):
         "RUNNO": runno,
         "DAP": dap,
         "RF": rf_pred,
-        #"XGB": xgb_pred, #Karthik: replace XGB with baseline
-        "XGB": row['LAI'],
+        "XGB": xgb_pred, 
+        #Karthik: replace XGB with baseline
+        #"XGB": row['LAI'],
     }
 
 
