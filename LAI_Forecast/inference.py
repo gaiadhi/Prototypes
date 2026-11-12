@@ -100,6 +100,8 @@ def ensure_models_unzipped(zip_path: str = "models.zip") -> None:
     Ensure that the actual model artifact files exist locally.
     If not, extract them from models.zip (used by Streamlit Cloud).
     """
+    BASE_DIR = "/mount/src/prototypes/LAI_Forecast/" #for streamlit hosting
+    zip_path = BASE_DIR + zip_path
     needed = ["scaler.pkl", "rf_model.pkl", "xgb_model.json"]
 
     # Already unzipped → nothing to do
