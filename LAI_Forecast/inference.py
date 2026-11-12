@@ -168,7 +168,9 @@ def predict_from_env_overrides(df_lag, env_overrides, runno, dap, models):
         if f in row.index:
             row[f] = v
 
+    print(f"Baseline after override: {type(row)}\n{row} ")
     print(f"Baseline after override: {row['LAI']}")
+    
     x = row[feature_cols].values.reshape(1, -1)
     x_s = models.scaler.transform(x)
 
