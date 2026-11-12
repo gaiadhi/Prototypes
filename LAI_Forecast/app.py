@@ -15,7 +15,7 @@ st.title("LAI Driver What-if Demo (env inputs → LAI)")
 # -----------------------------------------
 @st.cache_data
 def load_df():
-    BASE_DIR = Path('app.py').resolve().parent
+    BASE_DIR = "/workspaces/Prototypes/LAI_Forecast" #for streamlit hosting
     return inference.load_data(BASE_DIR/"DSSAT_Merged_Neat.csv")
 
 @st.cache_resource
