@@ -161,15 +161,15 @@ def get_baseline_row(df_lag, runno, dap):
 def predict_from_env_overrides(df_lag, env_overrides, runno, dap, models):
     feature_cols = _get_feature_cols(df_lag, models.scaler)
     row = get_baseline_row(df_lag, runno, dap).copy()
-    print(f"Baseline before override: {row['LAI']}")
+    #print(f"Baseline before override: {row['LAI']}")
 
     # Override env drivers
     for f, v in env_overrides.items():
         if f in row.index:
             row[f] = v
 
-    print(f"Baseline after override: {type(row)}\n{row} ")
-    print(f"Baseline after override: {row['LAI']}")
+    #print(f"Baseline after override: {type(row)}\n{row} ")
+    #print(f"Baseline after override: {row['LAI']}")
     
     x = row[feature_cols].values.reshape(1, -1)
     x_s = models.scaler.transform(x)
@@ -181,9 +181,9 @@ def predict_from_env_overrides(df_lag, env_overrides, runno, dap, models):
         "RUNNO": runno,
         "DAP": dap,
         "RF": rf_pred,
-        #"XGB": xgb_pred, 
+        "XGB": xgb_pred, 
         #Karthik: replace XGB with baseline
-        "XGB": float(row['LAI']),
+        #"XGB": float(row['LAI']),
     }
 
 
