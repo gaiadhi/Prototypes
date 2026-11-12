@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
+
 
 import inference
 
@@ -13,7 +15,8 @@ st.title("LAI Driver What-if Demo (env inputs → LAI)")
 # -----------------------------------------
 @st.cache_data
 def load_df():
-    return inference.load_data("DSSAT_Merged_Neat.csv")
+    BASE_DIR = Path('app.py').resolve().parent
+    return inference.load_data(BASE_DIR/"DSSAT_Merged_Neat.csv")
 
 @st.cache_resource
 def load_models():
