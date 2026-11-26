@@ -1,0 +1,81 @@
+file,column,group,source,how_to_use
+biomass_dataset_v2.csv,run_id,id_time,DSSAT,Identify and group rows. Treatment meaning pending Karthik.
+biomass_dataset_v2.csv,treatment,id_time,DSSAT,Identify and group rows. Treatment meaning pending Karthik.
+biomass_dataset_v2.csv,year,id_time,DSSAT,Identify and group rows. Treatment meaning pending Karthik.
+biomass_dataset_v2.csv,calendar_date,id_time,DSSAT,Identify and group rows. Treatment meaning pending Karthik.
+biomass_dataset_v2.csv,doy,id_time,DSSAT,Identify and group rows. Treatment meaning pending Karthik.
+biomass_dataset_v2.csv,dap,id_time,DSSAT,Identify and group rows. Treatment meaning pending Karthik.
+biomass_dataset_v2.csv,dssat_stage_code,growth_stage,DSSAT GSTD,"Candidate training input (Vasu). Names interpret DSSAT codes, pending Karthik's confirmation."
+biomass_dataset_v2.csv,dssat_stage_name,growth_stage,DSSAT GSTD,"Candidate training input (Vasu). Names interpret DSSAT codes, pending Karthik's confirmation."
+biomass_dataset_v2.csv,dssat_biomass_kg_ha,target,"DSSAT CWAD, kg/ha dry weight",Model target
+biomass_dataset_v2.csv,HLS_Blue,band,"PROSAIL output, plain average over band window",Model input
+biomass_dataset_v2.csv,HLS_Green,band,"PROSAIL output, plain average over band window",Model input
+biomass_dataset_v2.csv,HLS_Red,band,"PROSAIL output, plain average over band window",Model input
+biomass_dataset_v2.csv,HLS_NIR,band,"PROSAIL output, plain average over band window",Model input
+biomass_dataset_v2.csv,HLS_SWIR1,band,"PROSAIL output, plain average over band window",Model input
+biomass_dataset_v2.csv,HLS_SWIR2,band,"PROSAIL output, plain average over band window",Model input
+biomass_dataset_v2.csv,S2_B1_CoastalAerosol,band,"PROSAIL output, plain average over band window",Model input
+biomass_dataset_v2.csv,S2_B2_Blue,band,"PROSAIL output, plain average over band window",Model input
+biomass_dataset_v2.csv,S2_B3_Green,band,"PROSAIL output, plain average over band window",Model input
+biomass_dataset_v2.csv,S2_B4_Red,band,"PROSAIL output, plain average over band window",Model input
+biomass_dataset_v2.csv,S2_B5_RedEdge1,band,"PROSAIL output, plain average over band window",Model input
+biomass_dataset_v2.csv,S2_B6_RedEdge2,band,"PROSAIL output, plain average over band window",Model input
+biomass_dataset_v2.csv,S2_B7_RedEdge3,band,"PROSAIL output, plain average over band window",Model input
+biomass_dataset_v2.csv,S2_B8_NIR,band,"PROSAIL output, plain average over band window",Model input
+biomass_dataset_v2.csv,S2_B8A_NIR_Narrow,band,"PROSAIL output, plain average over band window",Model input
+biomass_dataset_v2.csv,S2_B9_WaterVapor,band,"PROSAIL output, plain average over band window",Model input
+biomass_dataset_v2.csv,S2_B11_SWIR1,band,"PROSAIL output, plain average over band window",Model input
+biomass_dataset_v2.csv,S2_B12_SWIR2,band,"PROSAIL output, plain average over band window",Model input
+biomass_dataset_v2.csv,dssat_lai,dssat_context,DSSAT LAID,Analysis or second target only. Never an input: it generated the bands.
+biomass_dataset_v2.csv,dssat_grain_weight_kg_ha,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2.csv,dssat_soil_n_inorganic_kg_ha,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2.csv,dssat_soil_water_total_mm,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2.csv,dssat_soil_water_layer1,dssat_context,DSSAT topsoil water,Context. Candidate input as a stand-in for SAR surface soil moisture (layer depth to confirm). Also drives prosail_psoil.
+biomass_dataset_v2.csv,dssat_wx_solar_rad,dssat_context,"DSSAT weather, realigned by date",Context. Fair input candidate (weather is available on real fields). Missing after mid-August.
+biomass_dataset_v2.csv,dssat_wx_tmax_c,dssat_context,"DSSAT weather, realigned by date",Context. Fair input candidate (weather is available on real fields). Missing after mid-August.
+biomass_dataset_v2.csv,dssat_wx_tmin_c,dssat_context,"DSSAT weather, realigned by date",Context. Fair input candidate (weather is available on real fields). Missing after mid-August.
+biomass_dataset_v2.csv,flag_weather_missing,dssat_context,Computed,True where the source file has no weather (after mid-August)
+biomass_dataset_v2.csv,flag_lai_below_research_min,flag,Computed,Filter or check rows
+biomass_dataset_v2_log.csv,run_id,id_time,DSSAT,Identify and group rows. Treatment meaning pending Karthik.
+biomass_dataset_v2_log.csv,dap,id_time,DSSAT,Identify and group rows. Treatment meaning pending Karthik.
+biomass_dataset_v2_log.csv,prosail_n,prosail_input_log,"Drawn once per season within researched range, steady all season",Reproducibility only. Never a model input.
+biomass_dataset_v2_log.csv,prosail_cab,prosail_input_log,"Follows DSSAT growth stage within Thorp et al. 2024 bounds, smoothed, small daily noise. Stage shape: real evidence, no extractable per-stage number.",Reproducibility only. Never a model input.
+biomass_dataset_v2_log.csv,prosail_car,prosail_input_log,"Drawn once per season within researched range, steady all season",Reproducibility only. Never a model input.
+biomass_dataset_v2_log.csv,prosail_cbrown,prosail_input_log,"Fixed at 0 by convention, no cotton source",Reproducibility only. Never a model input.
+biomass_dataset_v2_log.csv,prosail_cw,prosail_input_log,Fixed by convention (researched table),Reproducibility only. Never a model input.
+biomass_dataset_v2_log.csv,prosail_cm,prosail_input_log,"Drawn once per season within researched range, steady all season",Reproducibility only. Never a model input.
+biomass_dataset_v2_log.csv,prosail_lai,prosail_input_log,Copied from DSSAT LAID,Reproducibility only. Never a model input.
+biomass_dataset_v2_log.csv,prosail_lidfa,prosail_input_log,Fixed by convention (researched table),Reproducibility only. Never a model input.
+biomass_dataset_v2_log.csv,prosail_hspot,prosail_input_log,"Drawn once per season within researched range, steady all season",Reproducibility only. Never a model input.
+biomass_dataset_v2_log.csv,prosail_tts,prosail_input_log,Computed from date and site latitude at about 10:30 local solar time,Reproducibility only. Never a model input.
+biomass_dataset_v2_log.csv,prosail_tto,prosail_input_log,Random daily within researched range,Reproducibility only. Never a model input.
+biomass_dataset_v2_log.csv,prosail_psi,prosail_input_log,Random daily within researched range,Reproducibility only. Never a model input.
+biomass_dataset_v2_log.csv,prosail_rsoil,prosail_input_log,"Fixed at 1.0, PROSAIL default",Reproducibility only. Never a model input.
+biomass_dataset_v2_log.csv,prosail_psoil,prosail_input_log,From DSSAT topsoil water: wetter = darker,Reproducibility only. Never a model input.
+biomass_dataset_v2_log.csv,WG_Blue,band_drone,"PROSAIL output, WeedsGalore drone bands",Not for this team (drone weed work)
+biomass_dataset_v2_log.csv,WG_Green,band_drone,"PROSAIL output, WeedsGalore drone bands",Not for this team (drone weed work)
+biomass_dataset_v2_log.csv,WG_Red,band_drone,"PROSAIL output, WeedsGalore drone bands",Not for this team (drone weed work)
+biomass_dataset_v2_log.csv,WG_RedEdge,band_drone,"PROSAIL output, WeedsGalore drone bands",Not for this team (drone weed work)
+biomass_dataset_v2_log.csv,WG_NIR,band_drone,"PROSAIL output, WeedsGalore drone bands",Not for this team (drone weed work)
+biomass_dataset_v2_log.csv,dssat_soil_n_total_inorganic,dssat_duplicate,DSSAT output,"Near-duplicate of a main-file column, kept for reference only"
+biomass_dataset_v2_log.csv,dssat_soil_water_extractable_mm,dssat_duplicate,DSSAT output,"Near-duplicate of a main-file column, kept for reference only"
+biomass_dataset_v2_log.csv,dssat_wx_par,dssat_duplicate,DSSAT output,"Near-duplicate of a main-file column, kept for reference only"
+biomass_dataset_v2_log.csv,dssat_wx_tgrd,dssat_unclear,DSSAT weather TGRD,Meaning to confirm with Karthik
+biomass_dataset_v2_log.csv,dssat_soil_n_layer1,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2_log.csv,dssat_soil_n_layer2,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2_log.csv,dssat_soil_n_layer3,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2_log.csv,dssat_soil_n_layer4,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2_log.csv,dssat_soil_n_layer5,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2_log.csv,dssat_soil_n_layer6,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2_log.csv,dssat_soil_n_layer7,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2_log.csv,dssat_soil_n_layer8,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2_log.csv,dssat_soil_n_layer9,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2_log.csv,dssat_soil_water_layer2,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2_log.csv,dssat_soil_water_layer3,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2_log.csv,dssat_soil_water_layer4,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2_log.csv,dssat_soil_water_layer5,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2_log.csv,dssat_soil_water_layer6,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2_log.csv,dssat_soil_water_layer7,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2_log.csv,dssat_soil_water_layer8,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2_log.csv,dssat_soil_water_layer9,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.
+biomass_dataset_v2_log.csv,dssat_soil_water_layer10,dssat_context,DSSAT output (alignment to crop day not verifiable from file),Error analysis. Not available on real fields.

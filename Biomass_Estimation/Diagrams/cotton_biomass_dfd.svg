@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="dfd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" font-family="Arial, Helvetica, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#333333"/></marker>
+<marker id="ahn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#1F3A68"/></marker></defs>
+<rect id="background" x="0" y="0" width="1920" height="1080" fill="#FFFFFF"/>
+<g id="header">
+<text x="40" y="52" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="start">Data Flow Diagram: Cotton Above-Ground Biomass Estimation</text>
+<text x="40" y="84" font-size="18" font-weight="400" fill="#404040" text-anchor="start">High Resolution Biomass Estimation Using Low Resolution Satellite Data  |  Sponsor: Gaiadhi  |  Current implementation</text>
+</g>
+<g id="section-supplied">
+<text x="40" y="138" font-size="18" font-weight="700" fill="#1F3A68" text-anchor="start">SUPPLIED SIMULATION DATA (not built by the team)</text>
+<line x1="40" y1="150" x2="640" y2="150" stroke="#1F3A68" stroke-width="2"/>
+</g>
+<g id="section-team">
+<text x="800" y="138" font-size="18" font-weight="700" fill="#1F3A68" text-anchor="start">TEAM’S ML PIPELINE</text>
+<line x1="800" y1="150" x2="1880" y2="150" stroke="#1F3A68" stroke-width="2"/>
+</g>
+<line id="ownership-boundary" x1="720" y1="118" x2="720" y2="1005" stroke="#8C8C8C" stroke-width="1.5" stroke-dasharray="6 6"/>
+<text x="40" y="186" font-size="16" font-weight="700" fill="#404040" text-anchor="start">Simulation sources</text>
+<text x="410" y="186" font-size="16" font-weight="700" fill="#404040" text-anchor="start">Integrated dataset</text>
+<text x="800" y="186" font-size="16" font-weight="700" fill="#404040" text-anchor="start">Data preparation</text>
+<text x="1220" y="186" font-size="16" font-weight="700" fill="#404040" text-anchor="start">Model training and prediction</text>
+<text x="1600" y="186" font-size="16" font-weight="700" fill="#404040" text-anchor="start">Evaluation</text>
+<g id="E1-dssat">
+<rect x="40" y="420" width="250" height="144" fill="#FFFFFF" stroke="#333333" stroke-width="1.5"/>
+<line x1="40" y1="462" x2="290" y2="462" stroke="#333333" stroke-width="1.5"/>
+<text x="54" y="448" font-size="18" font-weight="700" fill="#1F3A68" text-anchor="start">E1</text>
+<text x="98" y="448" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">DSSAT</text>
+<text x="54" y="488" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Crop growth simulation</text>
+<text x="54" y="509" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Simulated biomass (labels)</text>
+<text x="54" y="530" font-size="16" font-weight="400" fill="#262626" text-anchor="start">DAP, year, treatment,</text>
+<text x="54" y="551" font-size="16" font-weight="400" fill="#262626" text-anchor="start">growth stage</text>
+</g>
+<g id="E2-prosail">
+<rect x="40" y="700" width="250" height="144" fill="#FFFFFF" stroke="#333333" stroke-width="1.5"/>
+<line x1="40" y1="742" x2="290" y2="742" stroke="#333333" stroke-width="1.5"/>
+<text x="54" y="728" font-size="18" font-weight="700" fill="#1F3A68" text-anchor="start">E2</text>
+<text x="98" y="728" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">PROSAIL</text>
+<text x="54" y="768" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Radiative transfer model</text>
+<text x="54" y="789" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Simulated canopy reflectance,</text>
+<text x="54" y="810" font-size="16" font-weight="400" fill="#262626" text-anchor="start">12 Sentinel-2 bands</text>
+<text x="54" y="831" font-size="16" font-weight="400" fill="#262626" text-anchor="start">(reflectance only)</text>
+</g>
+<g id="D1-dataset">
+<rect x="410" y="230" width="250" height="144" fill="#FFFFFF" stroke="none"/>
+<polyline points="660,230 410,230 410,374 660,374" fill="none" stroke="#333333" stroke-width="1.5"/>
+<line x1="458" y1="230" x2="458" y2="374" stroke="#333333" stroke-width="1.5"/>
+<text x="434" y="258" font-size="18" font-weight="700" fill="#1F3A68" text-anchor="middle">D1</text>
+<text x="470" y="258" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Dataset V2</text>
+<line x1="458" y1="272" x2="660" y2="272" stroke="#333333" stroke-width="1"/>
+<text x="470" y="298" font-size="16" font-weight="400" fill="#262626" text-anchor="start">biomass_dataset_v2.csv</text>
+<text x="470" y="319" font-size="16" font-weight="400" fill="#262626" text-anchor="start">5,265 rows × 37 columns</text>
+<text x="470" y="340" font-size="16" font-weight="400" fill="#262626" text-anchor="start">2019–2023, 8 treatments</text>
+<text x="470" y="361" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Simulated tabular data</text>
+</g>
+<g id="P1-integration">
+<rect x="410" y="545" width="250" height="124" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="1.5"/>
+<line x1="410" y1="609" x2="660" y2="609" stroke="#333333" stroke-width="1.5"/>
+<text x="424" y="573" font-size="18" font-weight="700" fill="#1F3A68" text-anchor="start">1.0</text>
+<text x="468" y="573" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Observation</text>
+<text x="468" y="595" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Integration</text>
+<text x="424" y="635" font-size="16" font-weight="400" fill="#262626" text-anchor="start">One simulated record per</text>
+<text x="424" y="656" font-size="16" font-weight="400" fill="#262626" text-anchor="start">year × treatment × DAP</text>
+</g>
+<polyline id="flow-lai" points="165,564 165,697" fill="none" stroke="#333333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="177" y="637" font-size="16" font-weight="400" fill="#262626" text-anchor="start">LAI (canopy input)†</text>
+<polyline id="flow-dssat-integration" points="290,470 470,470 470,542" fill="none" stroke="#333333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="300" y="438" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Biomass labels, DAP,</text>
+<text x="300" y="458" font-size="16" font-weight="400" fill="#262626" text-anchor="start">year, treatment, stage</text>
+<polyline id="flow-reflectance" points="290,780 470,780 470,672" fill="none" stroke="#333333" stroke-width="1.6" marker-end="url(#ah)"/>
+<g id="E-prosail-parameters">
+<rect x="40" y="935" width="250" height="46" fill="#FFFFFF" stroke="#333333" stroke-width="1.5"/>
+<text x="54" y="964" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Parameter inputs</text>
+</g>
+<polyline id="flow-prosail-parameters" points="165,935 165,847" fill="none" stroke="#333333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="177" y="875" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Other leaf, soil, sun</text>
+<text x="177" y="895" font-size="16" font-weight="400" fill="#262626" text-anchor="start">and view parameters</text>
+<text x="300" y="770" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Reflectance (12 bands)</text>
+<polyline id="flow-integration-d1" points="585,545 585,377" fill="none" stroke="#333333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="488" y="488" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Integrated</text>
+<text x="488" y="508" font-size="16" font-weight="400" fill="#262626" text-anchor="start">records</text>
+<g id="P2-load">
+<rect x="800" y="230" width="250" height="144" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="1.5"/>
+<line x1="800" y1="272" x2="1050" y2="272" stroke="#333333" stroke-width="1.5"/>
+<text x="814" y="258" font-size="18" font-weight="700" fill="#1F3A68" text-anchor="start">2.0</text>
+<text x="858" y="258" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Load &amp; Prepare Data</text>
+<text x="814" y="298" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Python / Google Colab</text>
+<text x="814" y="319" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Load Dataset V2</text>
+<text x="814" y="340" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Missing-value check:</text>
+<text x="814" y="361" font-size="16" font-weight="400" fill="#262626" text-anchor="start">0 missing in X and y</text>
+</g>
+<polyline id="flow-d1-load" points="660,252 797,252" fill="none" stroke="#333333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="730" y="242" font-size="16" font-weight="400" fill="#262626" text-anchor="start">CSV file</text>
+<g id="P3-features">
+<rect x="800" y="450" width="250" height="208" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="1.5"/>
+<line x1="800" y1="514" x2="1050" y2="514" stroke="#333333" stroke-width="1.5"/>
+<text x="814" y="478" font-size="18" font-weight="700" fill="#1F3A68" text-anchor="start">3.0</text>
+<text x="858" y="478" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Define Features</text>
+<text x="858" y="500" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">&amp; Target</text>
+<text x="814" y="540" font-size="16" font-weight="400" fill="#262626" text-anchor="start">X: 13 predictors =</text>
+<text x="814" y="561" font-size="16" font-weight="400" fill="#262626" text-anchor="start">12 Sentinel-2 bands + DAP</text>
+<text x="814" y="582" font-size="16" font-weight="400" fill="#262626" text-anchor="start">y: dssat_biomass_kg_ha</text>
+<text x="814" y="603" font-size="16" font-weight="400" fill="#262626" text-anchor="start">(simulated, kg/ha)</text>
+<text x="814" y="624" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Year, treatment: split and</text>
+<text x="814" y="645" font-size="16" font-weight="400" fill="#262626" text-anchor="start">diagnostics only</text>
+</g>
+<polyline id="flow-load-features" points="925,374 925,447" fill="none" stroke="#333333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="937" y="418" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Prepared table</text>
+<g id="P4-split">
+<rect x="800" y="718" width="250" height="102" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="1.5"/>
+<line x1="800" y1="760" x2="1050" y2="760" stroke="#333333" stroke-width="1.5"/>
+<text x="814" y="746" font-size="18" font-weight="700" fill="#1F3A68" text-anchor="start">4.0</text>
+<text x="858" y="746" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Year-Based Split</text>
+<text x="814" y="786" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Train: 2019–2022</text>
+<text x="814" y="807" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Test: 2023</text>
+</g>
+<polyline id="flow-features-split" points="925,658 925,715" fill="none" stroke="#333333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="937" y="694" font-size="16" font-weight="400" fill="#262626" text-anchor="start">X, y</text>
+<g id="P5-fit">
+<rect x="1220" y="230" width="250" height="145" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="1.5"/>
+<line x1="1220" y1="294" x2="1470" y2="294" stroke="#333333" stroke-width="1.5"/>
+<text x="1234" y="258" font-size="18" font-weight="700" fill="#1F3A68" text-anchor="start">5.0</text>
+<text x="1278" y="258" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Fit Linear</text>
+<text x="1278" y="280" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Regression</text>
+<text x="1234" y="320" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Standard linear regression</text>
+<text x="1234" y="341" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Supervised, 13 features</text>
+<text x="1234" y="362" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Official baseline</text>
+</g>
+<g id="D2-model">
+<rect x="1220" y="445" width="250" height="64" fill="#FFFFFF" stroke="none"/>
+<polyline points="1470,445 1220,445 1220,509 1470,509" fill="none" stroke="#333333" stroke-width="1.5"/>
+<line x1="1268" y1="445" x2="1268" y2="509" stroke="#333333" stroke-width="1.5"/>
+<text x="1244" y="473" font-size="18" font-weight="700" fill="#1F3A68" text-anchor="middle">D2</text>
+<text x="1280" y="473" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Trained Linear</text>
+<text x="1280" y="495" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Regression Model</text>
+</g>
+<polyline id="flow-fit-model" points="1345,375 1345,442" fill="none" stroke="#333333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="1357" y="416" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Fitted coefficients</text>
+<g id="P6-predict">
+<rect x="1220" y="599" width="250" height="166" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="1.5"/>
+<line x1="1220" y1="663" x2="1470" y2="663" stroke="#333333" stroke-width="1.5"/>
+<text x="1234" y="627" font-size="18" font-weight="700" fill="#1F3A68" text-anchor="start">6.0</text>
+<text x="1278" y="627" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Predict 2023</text>
+<text x="1278" y="649" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Biomass</text>
+<text x="1234" y="689" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Output: raw prediction ŷ</text>
+<text x="1234" y="710" font-size="16" font-weight="400" fill="#262626" text-anchor="start">(kg/ha)</text>
+<text x="1234" y="731" font-size="16" font-weight="400" fill="#262626" text-anchor="start">153 negative predictions</text>
+<text x="1234" y="752" font-size="16" font-weight="400" fill="#262626" text-anchor="start">before clipping</text>
+</g>
+<polyline id="flow-model-predict" points="1345,509 1345,596" fill="none" stroke="#333333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="1357" y="560" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Trained model</text>
+<g id="P7-clip">
+<rect x="1220" y="825" width="250" height="123" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="1.5"/>
+<line x1="1220" y1="867" x2="1470" y2="867" stroke="#333333" stroke-width="1.5"/>
+<text x="1234" y="853" font-size="18" font-weight="700" fill="#1F3A68" text-anchor="start">7.0</text>
+<text x="1278" y="853" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Zero Clipping</text>
+<text x="1234" y="893" font-size="16" font-weight="400" fill="#262626" text-anchor="start">ŷ_final = max(0, ŷ)</text>
+<text x="1234" y="914" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Enforces nonnegative</text>
+<text x="1234" y="935" font-size="16" font-weight="400" fill="#262626" text-anchor="start">biomass predictions</text>
+</g>
+<polyline id="flow-predict-clip" points="1345,765 1345,822" fill="none" stroke="#333333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="1357" y="801" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Raw ŷ</text>
+<polyline id="flow-train" points="1050,730 1080,730 1080,300 1217,300" fill="none" stroke="#333333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="1092" y="360" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Training set</text>
+<text x="1092" y="381" font-size="16" font-weight="400" fill="#262626" text-anchor="start">2019–2022</text>
+<text x="1092" y="402" font-size="16" font-weight="400" fill="#262626" text-anchor="start">4,209 obs.</text>
+<text x="1092" y="423" font-size="16" font-weight="400" fill="#262626" text-anchor="start">X_train, y_train</text>
+<polyline id="flow-test-X" points="1050,752 1217,752" fill="none" stroke="#333333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="1092" y="680" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Test set</text>
+<text x="1092" y="700" font-size="16" font-weight="400" fill="#262626" text-anchor="start">2023</text>
+<text x="1092" y="720" font-size="16" font-weight="400" fill="#262626" text-anchor="start">1,056 obs.</text>
+<text x="1092" y="740" font-size="16" font-weight="400" fill="#262626" text-anchor="start">X_test</text>
+<g id="P8-evaluate">
+<rect x="1600" y="440" width="280" height="290" rx="8" fill="#FFFFFF" stroke="#333333" stroke-width="1.5"/>
+<text x="1614" y="468" font-size="18" font-weight="700" fill="#1F3A68" text-anchor="start">8.0</text>
+<text x="1658" y="468" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Evaluate &amp; Analyze</text>
+<text x="1658" y="490" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Errors</text>
+<line x1="1600" y1="504" x2="1880" y2="504" stroke="#333333" stroke-width="1.5"/>
+<text x="1614" y="530" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Residual = predicted − actual</text>
+<line x1="1614" y1="544" x2="1866" y2="544" stroke="#9A9A9A" stroke-width="1"/>
+<text x="1614" y="566" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">RMSE</text>
+<text x="1866" y="566" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="end">694.235 kg/ha</text>
+<line x1="1614" y1="576" x2="1866" y2="576" stroke="#9A9A9A" stroke-width="1"/>
+<text x="1614" y="598" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">R²</text>
+<text x="1866" y="598" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="end">0.877</text>
+<line x1="1614" y1="608" x2="1866" y2="608" stroke="#9A9A9A" stroke-width="1"/>
+<text x="1614" y="630" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Mean residual</text>
+<text x="1866" y="630" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="end">+332.972 kg/ha</text>
+<line x1="1614" y1="640" x2="1866" y2="640" stroke="#9A9A9A" stroke-width="1"/>
+<text x="1614" y="662" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Within ±10%*</text>
+<text x="1866" y="662" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="end">28.65%</text>
+<line x1="1614" y1="672" x2="1866" y2="672" stroke="#9A9A9A" stroke-width="1"/>
+<text x="1614" y="696" font-size="16" font-weight="400" fill="#262626" text-anchor="start">* actual biomass &gt; 500 kg/ha</text>
+<text x="1614" y="717" font-size="16" font-weight="400" fill="#262626" text-anchor="start">R² = explained variance</text>
+</g>
+<g id="diagnostic-outputs">
+<rect x="1600" y="230" width="280" height="140" fill="#FFFFFF" stroke="#333333" stroke-width="1.5"/>
+<text x="1614" y="258" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Diagnostic Outputs</text>
+<line x1="1600" y1="272" x2="1880" y2="272" stroke="#333333" stroke-width="1.5"/>
+<text x="1614" y="298" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Actual vs. predicted</text>
+<text x="1614" y="319" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Residuals</text>
+<text x="1614" y="340" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Error by growth stage,</text>
+<text x="1614" y="361" font-size="16" font-weight="400" fill="#262626" text-anchor="start">treatment and year</text>
+</g>
+<polyline id="flow-eval-diagnostics" points="1740,440 1740,373" fill="none" stroke="#333333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="1752" y="411" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Error analysis</text>
+<g id="final-output">
+<rect x="1600" y="835" width="190" height="66" fill="#FFFFFF" stroke="#333333" stroke-width="1.5"/>
+<text x="1614" y="863" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Final Predicted</text>
+<text x="1614" y="885" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Biomass (kg/ha)</text>
+</g>
+<polyline id="flow-clip-final" points="1470,868 1597,868" fill="none" stroke="#333333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="1482" y="838" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Clipped ŷ</text>
+<text x="1482" y="858" font-size="16" font-weight="400" fill="#262626" text-anchor="start">(kg/ha)</text>
+<polyline id="flow-final-evaluate" points="1695,835 1695,733" fill="none" stroke="#333333" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="1707" y="778" font-size="16" font-weight="400" fill="#262626" text-anchor="start">Final</text>
+<text x="1707" y="798" font-size="16" font-weight="400" fill="#262626" text-anchor="start">predictions</text>
+<polyline id="flow-ytest-reference" points="925,820 925,1005 1840,1005 1840,733" fill="none" stroke="#1F3A68" stroke-width="1.6" stroke-dasharray="9 6" marker-end="url(#ahn)"/>
+<text x="945" y="996" font-size="16" font-weight="700" fill="#1F3A68" text-anchor="start">y_test: actual 2023 simulated biomass (reference path to evaluation only)</text>
+<text id="footer" x="960" y="1044" font-size="16" font-weight="400" fill="#404040" text-anchor="middle">Current implementation: supervised biomass regression on simulated DSSAT/PROSAIL tabular data (no satellite images or field-measured biomass).</text>
+<text id="footnote-lai" x="960" y="1070" font-size="16" font-weight="400" fill="#404040" text-anchor="middle">† DSSAT-derived LAI → PROSAIL confirmed for Dataset V1; V2 linkage not independently confirmed.</text>
+</svg>
